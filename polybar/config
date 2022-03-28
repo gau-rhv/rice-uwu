@@ -1,0 +1,347 @@
+;====================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;===========================================================
+
+[colors]
+background = #3B4252
+foreground = ${xrdb:foreground}
+color0 = ${xrdb:color0}
+color1 = ${xrdb:color1}
+color2 = ${xrdb:color2}
+color3 = ${xrdb:color3}
+color4 = ${xrdb:color4}
+color5 = ${xrdb:color5}
+
+color8 = ${xrdb:color8}
+color9 = ${xrdb:color9}
+color10 = ${xrdb:color10}
+color11 = ${xrdb:color11}
+color12 = ${xrdb:color12}
+color13 = ${xrdb:color13}
+color14 = ${xrdb:color14}
+color15 = ${xrdb:color15}
+dark-light = #272A2B
+active-light = #313435
+
+[bar/example]
+#monitor = LVDS-1
+width = 98%
+height = 36
+offset-x = 1%
+offset-y = 2%
+radius = 9
+fixed-center = false
+bottom = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+line-size = 4
+border-size = 2
+border-top-size = 2
+border-bottom-size = 4
+border-left-size = 4
+border-right-size = 4
+;border-top-color = #88c0d0
+;border-left-color = #88c0d0
+;border-right-color = #88c0d0
+padding-left = 0
+padding-right = 1
+padding-top = 4
+module-margin-right = 0
+module-margin-left = 0
+
+font-0 = JetBrainsMono-Bold:style:Bold:pixelsize=11;1
+font-1 = Material Design Icons:size=12;1
+font-2 = unifont:pixelsize=12;2
+font-3 = JetBrainsMono Nerd Font:pixelsize=31;7
+
+modules-left = menu bspwm xwindow
+modules-center =
+modules-right = temperature mem wlan pulseaudio date battery powermenu
+
+wm-restack = bspwm
+;wm-restack = i3
+
+;override redirect = false
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/round-right]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = #81A1C1
+
+[module/xwindow]
+type = internal/xwindow
+
+label = %title:..%
+label-maxlen = 20
+label-foreground = #D8DEE9
+label-padding = 1
+
+; Used instead of label when there is no window title
+label-empty = "Desktop"
+label-empty-foreground = ${color.blue-light}
+label-empty-padding = 2
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /
+label-foreground = #88c0d0
+label-mounted = %{F#88C0D0}%mountpoint%%{F-}: %percentage_used% %{F#99C0D0}
+label-unmounted = %mountpoint% not mounted
+label-mounted-underline = #88c0d0
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+inline-mode = true
+enable-click = true
+enable-scroll = true
+reverse-scroll = false
+
+format = <label-state>
+
+ws-icon-0 =1;%{F#9e9e9e}󰮯
+ws-icon-1 =2;%{F#9e9e9e}󱓜
+ws-icon-2 =3;%{F#9e9e9e}󱓜
+ws-icon-3 =4;%{F#9e9e9e}󱓜
+ws-icon-4 =5;%{F#9e9e9e}󱓜
+ws-icon-5 =6;%{F#9e9e9e}󰊠
+
+label-focused = %icon%
+label-focused-background= #2d2c2c
+label-focused-padding = 1
+
+label-occupied = %icon%
+label-occupied-padding = 1
+label-occupied-foreground = #f0f2ef
+
+label-urgent = %icon%
+;label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+label-urgent-background = #f19cd7
+
+label-empty = %icon%
+label-empty-foreground = #D8DEE9
+label-empty-padding = 1
+
+; Separator in between workspaces
+ label-separator = " "
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+[module/menu]
+type = custom/text
+content =
+content-background = #3B4252
+content-foreground = #7a8781
+click-left = dmenu_run -l 17 -p RUN
+;content-underline = #4C566A
+content-padding= 1
+
+[module/powermenu]
+type = custom/text
+content = 󰐥
+click-left = ~/.config/polybar/scripts/dmenu.sh &
+;content-background = #B48EAD
+content-foreground = #B48EAD
+content-padding = 1
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "󰻟 "
+format-prefix-foreground = #d08770
+format-underline = #d08770
+label = %percentage%%
+label-foreground = #d08770
+label-padding = 1
+format-margin = 1
+
+[module/mem]
+type = custom/script
+exec = free -m | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
+format = <label>
+label = 󰍛 %output%
+label-padding = 1
+;format-underline = #EBCB8B
+label-foreground = #acacb7
+format-margin =1
+
+[module/wlan]
+type = internal/network
+interface = wlp4s0
+interval = 3.0
+format-connected = <ramp-signal> <label-connected>
+;format-connected-underline = #a3be8c
+label-connected = %essid%
+format-foreground = #acacb7
+label-connected-foreground = #acacb7
+format-disconnected = You're Offline :(
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+ramp-signal-0 = 󰤨
+ramp-signal-foreground = #acacb7
+format-margin = 1
+
+[module/date]
+type = internal/date
+interval = 60
+
+time-alt = "%I:%M %p"
+date  = " %Y-%m-%d"
+
+format-foreground = #6f9992
+format-background = #3B4252
+format-padding = 1
+label = %time% %date%
+format-margin = 1
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume = <label-volume>
+;label-volume = VOL %percentage%%
+label-volume = %{F#acacb7}󰕾 %percentage%%{F-}
+label-volume-foreground = #acacb7
+;label-volume-underline = #BF616A
+;label-volume-background = #BF616A
+;extra added
+format-volume-padding = 1
+label-muted-padding = 1
+label-volume-padding = 1
+;will remove
+label-muted =󰝟  muted
+label-muted-foreground = #BF616A
+format-margin = 1
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ACAD
+full-at = 100
+format-charging = 󰂄<label-charging>
+label-charging = %percentage:1%%
+format-charging-padding = 1
+format-charging-foreground = ${colors.foreground}
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%%
+format-discharging-foreground = ${colors.foreground}
+format-full-prefix = "󱈑"
+ramp-capacity-0 = "󰂎"
+ramp-capacity-1 = "󱊡"
+ramp-capacity-2 = "󱊢"
+ramp-capacity-3 = "󱊣"
+ramp-capacity-4 = "󰂏"
+ramp-capacity-0-foreground = ${colors.red}
+animation-charging-framerate = 910
+format-discharging-padding = 1
+
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+label-foreground =  #b48ead
+format = <ramp> <label>
+;format-underline = #b48ead
+format-warn = <ramp>  <label-warn>
+format-warn-underline = #b48ead
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = #b48ead
+
+ramp-0 = 󰸁
+ramp-foreground = #b48ead
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
+
