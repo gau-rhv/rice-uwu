@@ -1,3 +1,7 @@
 # 🍥 Rice-uwu 🌸
 
-## My Arch
+## My Arch config files
+
+❄️ BSPWM
+🌸 Picom ibhagwan
+
