@@ -1,0 +1,3 @@
+# 🍥 Rice-uwu 🌸
+
+## My Arch
