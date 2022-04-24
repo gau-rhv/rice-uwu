@@ -6,6 +6,8 @@
 
 🌸 Picom ibhagwan
 
+🧩 Polybar
+
 🃏 Kitty Terminal
 
 👻 NeoVim
