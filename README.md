@@ -6,3 +6,9 @@
 
 🌸 Picom ibhagwan
 
+🃏 Kitty Terminal
+
+👻 NeoVim
+
+🎴 Sxhkd
+
