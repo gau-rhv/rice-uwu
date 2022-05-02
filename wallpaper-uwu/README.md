@@ -2,6 +2,8 @@
 
 ## Dont Judge My weird Taste
 
+## These wallpapers are from https://wallhaven.cc
+
 ## The Resolution is 1366x768
 
 ![wallhaven-l3ov9l_1366x768](https://user-images.githubusercontent.com/102450738/165527438-9797830b-0cd1-4dc8-b43a-61b5f1892635.png)
