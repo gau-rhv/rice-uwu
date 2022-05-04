@@ -35,3 +35,5 @@ Packets: Sent = 4, Received = 4,
 Lost = 0 (0% loss), Approximate round trip times in milli-seconds: Minimum = 58ms
 
 Maximum = 70ms, Average = 63ms
+
+![Screenshot (25)](https://user-images.githubusercontent.com/102450738/164955813-d23ae0f5-43c9-4c78-a20f-c9382cf06f63.png)
