@@ -40,4 +40,4 @@ Maximum = 70ms, Average = 63ms
 
 ## Check the partitions
 
-root@archiso# 
+root@archiso# lsblk
