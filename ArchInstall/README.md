@@ -13,3 +13,7 @@ root@archiso ~ # iwctl
 [iwd]# station wlan0 connect iballbaton
 
 passphrase: ***********
+
+## Now check if you are connected to the internet
+
+root@archiso# ping google.com
