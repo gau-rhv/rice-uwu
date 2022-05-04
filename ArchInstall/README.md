@@ -17,3 +17,5 @@ passphrase: ***********
 ## Now check if you are connected to the internet
 
 root@archiso# ping google.com
+
+Pinging google.com [2404:6800:4007:808::200e] with 32 bytes of data:
