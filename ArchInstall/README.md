@@ -21,3 +21,4 @@ root@archiso# ping google.com
 Pinging google.com [2404:6800:4007:808::200e] with 32 bytes of data:
 Reply from 2404:6800:4007:808::200e: time=70ms
 Reply from 2404:6800:4007:808::200e: time=65ms
+Reply from 2404:6800:4007:808::200e: time=60ms
