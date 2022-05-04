@@ -1,4 +1,4 @@
-## Just how to Install Arch
+## Notes to Install Arch
 
 ## how to connect to a wifi network in archiso
 
