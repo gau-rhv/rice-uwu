@@ -11,3 +11,5 @@ root@archiso ~ # iwctl
 [iwd]# station wlan0 get-networks
 
 [iwd]# station wlan0 connect iballbaton
+
+passphrase: ***********
