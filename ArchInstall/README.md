@@ -41,3 +41,5 @@ Maximum = 70ms, Average = 63ms
 ## Check the partitions
 
 root@archiso# lsblk
+
+cfdisk /dev/
