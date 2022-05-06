@@ -45,3 +45,5 @@ root@archiso# lsblk
 cfdisk /dev/
 
 mkfs.fat -F32 /dev/sda1 (512M partition)
+
+mkfs.ext4 /dev/sda2
