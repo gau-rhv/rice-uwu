@@ -67,3 +67,5 @@ arch-chroot /mnt /bin/bash
 nano /etc/locale.gen 
 
 #en_US.UTF-8 UTF-8 (remove the hashtag)
+
+locale-gen
