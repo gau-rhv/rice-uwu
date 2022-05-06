@@ -43,3 +43,5 @@ Maximum = 70ms, Average = 63ms
 root@archiso# lsblk
 
 cfdisk /dev/
+
+mkfs.fat -F32 /dev/sda1 (512M partition)
