@@ -69,3 +69,5 @@ nano /etc/locale.gen
 #en_US.UTF-8 UTF-8 (remove the hashtag)
 
 locale-gen
+
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
