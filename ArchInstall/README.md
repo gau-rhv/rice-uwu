@@ -59,3 +59,5 @@ lsblk
 ## 
 
 pacstrap -i /mnt base base-devel linux linux-firmware sudo nano
+
+genfstab -U -p /mnt >> /mnt/etc/fstab
