@@ -52,3 +52,4 @@ mount /dev/sda2 /mnt
 
 mkdir /mnt/home
 
+mount /dev/sda2 /mnt/home
