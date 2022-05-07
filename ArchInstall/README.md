@@ -106,4 +106,8 @@ exit
 
 umount -R /mnt 
 
+reboot
+
+## Setup Swap file [optional]
+
 fallocate -l 16G /swapfile
