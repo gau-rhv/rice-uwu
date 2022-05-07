@@ -95,3 +95,5 @@ pacman -S grub efibootmgr
 mkdir /boot/efi
 
 mount /dev/sda1 /boot/efi
+
+lsblk # to check if everything is mounted correctly
