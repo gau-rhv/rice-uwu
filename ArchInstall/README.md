@@ -97,3 +97,6 @@ mkdir /boot/efi
 mount /dev/sda1 /boot/efi
 
 lsblk # to check if everything is mounted correctly
+
+grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi --removable
+
