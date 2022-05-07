@@ -83,3 +83,5 @@ echo archPC > /etc/hostname
 nano /etc/hosts
 
 127.0.1.1 localhost.localdomain archPC
+
+pacman -S networkmanager
