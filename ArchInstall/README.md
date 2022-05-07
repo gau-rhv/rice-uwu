@@ -106,3 +106,4 @@ exit
 
 umount -R /mnt 
 
+fallocate -l 16G /swapfile
