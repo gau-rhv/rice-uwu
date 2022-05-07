@@ -91,3 +91,5 @@ systemctl enable NetworkManager
 passwd
 
 pacman -S grub efibootmgr
+
+mkdir /boot/efi
