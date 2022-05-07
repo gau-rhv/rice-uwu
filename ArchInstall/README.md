@@ -93,3 +93,5 @@ passwd
 pacman -S grub efibootmgr
 
 mkdir /boot/efi
+
+mount /dev/sda1 /boot/efi
