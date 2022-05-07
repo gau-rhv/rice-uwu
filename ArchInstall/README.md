@@ -77,3 +77,9 @@ ln -sf /usr/share/zoneinfo/Asia/Calcutta/ /etc/localtime (change the Asia/Calcut
 hwclock --systohc --utc
 
 date
+
+echo archPC > /etc/hostname
+
+nano /etc/hosts
+
+127.0.1.1 localhost.localdomain archPC
