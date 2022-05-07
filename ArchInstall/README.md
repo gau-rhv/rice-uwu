@@ -87,3 +87,5 @@ nano /etc/hosts
 pacman -S networkmanager
 
 systemctl enable NetworkManager
+
+passwd
