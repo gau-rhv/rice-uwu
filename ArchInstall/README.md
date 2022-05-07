@@ -105,3 +105,4 @@ grub-mkconfig -o /boot/grub/grub.cfg
 exit
 
 umount -R /mnt 
+
