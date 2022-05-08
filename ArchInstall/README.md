@@ -125,3 +125,5 @@ free -m
 ## basic & username things
 
 useradd -m -g users -G wheel -s /bin/bash username
+
+passwd username
