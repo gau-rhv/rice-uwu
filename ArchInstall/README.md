@@ -129,3 +129,5 @@ useradd -m -g users -G wheel -s /bin/bash username
 passwd username
 
 EDITOR=nano visudo
+
+# %wheel ALL=(ALL) ALL (uncomment this)
