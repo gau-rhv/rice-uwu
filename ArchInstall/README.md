@@ -121,3 +121,5 @@ swapon /swapfile
 echo '/swapfile none swap sw 0 0' >> /etc/fstab
 
 free -m
+
+## basic & username things
