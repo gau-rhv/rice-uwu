@@ -111,3 +111,6 @@ reboot
 ## Setup Swap file [optional]
 
 fallocate -l 16G /swapfile
+
+chmod 600 /swapfile
+
