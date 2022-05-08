@@ -135,3 +135,5 @@ EDITOR=nano visudo
 exit
 
 ## Basic setup / Install 
+
+sudo pacman -Syyu
