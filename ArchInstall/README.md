@@ -123,3 +123,5 @@ echo '/swapfile none swap sw 0 0' >> /etc/fstab
 free -m
 
 ## basic & username things
+
+useradd -m -g users -G wheel -s /bin/bash username
