@@ -131,3 +131,5 @@ passwd username
 EDITOR=nano visudo
 
 # %wheel ALL=(ALL) ALL (uncomment this)
+
+exit
