@@ -137,3 +137,4 @@ exit
 ## Basic setup / Install 
 
 sudo pacman -Syyu
+
