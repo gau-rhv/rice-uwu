@@ -150,4 +150,4 @@ makepkg -si
 
 ## kde isntall
 
-sudo pacman -S xorg plasma
+sudo pacman -S xorg plasma kde-applications plasma-wayland-session
