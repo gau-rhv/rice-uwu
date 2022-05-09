@@ -148,4 +148,6 @@ cd yay
 
 makepkg -si
 
+## kde isntall
+
 
