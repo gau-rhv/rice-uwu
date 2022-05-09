@@ -138,3 +138,6 @@ exit
 
 sudo pacman -Syyu
 
+sudo pacman -S xorg xorg-xinit xorg-server pulseaudio pulseaudio-alsa git wget curl zip unzip gzip p7zip tar make cmake gcc python-pip node npm go neovim tree man-pages man-db 
+
+
