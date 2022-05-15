@@ -14,6 +14,7 @@ root@archiso ~ # iwctl
 
 passphrase: ***********
 
+
 ## Now check if you are connected to the internet
 
 root@archiso# ping google.com
