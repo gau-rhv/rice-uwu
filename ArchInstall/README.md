@@ -158,6 +158,7 @@ sudo pacman -S xorg plasma kde-applications plasma-wayland-session
  about:config
 
 toolkit.legacyUserProfileCustomizations.stylesheets
+
 layers.acceleration.force-enabled
 gfx.webrender.all
 gfx.webrender.enabled
