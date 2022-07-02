@@ -160,6 +160,7 @@ sudo pacman -S xorg plasma kde-applications plasma-wayland-session
 toolkit.legacyUserProfileCustomizations.stylesheets
 
 layers.acceleration.force-enabled
+
 gfx.webrender.all
 gfx.webrender.enabled
 layout.css.backdrop-filter.enabled
