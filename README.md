@@ -17,4 +17,3 @@
 🎴 Sxhkd
 
 🌆 Wallpaper
-
