@@ -21,3 +21,5 @@
 🎴 Sxhkd
 
 🌆 Wallpaper
+
+🗼 Grub
