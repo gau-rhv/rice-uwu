@@ -23,4 +23,3 @@
 🌆 Wallpaper
 
 🗼 Grub
-
